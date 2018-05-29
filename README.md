@@ -1,5 +1,5 @@
 # webpack-setup
-One person's guide for webapp deployment using webkit.
+One person's guide for webapp deployment using webpack.
 
 ## Main ingredients:
 ### Node
