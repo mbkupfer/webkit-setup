@@ -19,7 +19,7 @@ That being said, the webpack docs can do this topic much more justice in terms o
 
 Resources:
 - [Webpack docs](https://webpack.js.org/concepts/)
-- [A gentler introduction to webpack](https://getpocket.com/a/read/1983123979)
+- [A gentler introduction to webpack](https://auth0.com/blog/webpack-a-gentle-introduction/)
 
 ### Babel
 Javascript, or ECMAScript to be technical, is a constantly evolving language. At the time of this writing, the latest version is ES6 (or also referred to as ES2015). These continuous updates introduce new and useful features that allow us to be more efficient and do more interesting things with our code. Ideally, we would want to write our javascript using the newest features, but not all web browsers can support it yet...*I'm looking at you internet explorer*. This is where Babel comes in. Babel allows you to write your code in the latest version of javascript and it will [transpile](https://en.wikipedia.org/wiki/Source-to-source_compiler) the code into vaninlla ES5 that works in *every* browser.
