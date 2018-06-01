@@ -36,4 +36,4 @@ While default Babel does a lot of the heavy lifting on its own, there are still 
 Resources:
 
 - [Babel: How to use the Polyfill](https://Babeljs.io/docs/usage/polyfill/)
-- [Wiki: Polyfill (programming)](https://en.wikipedia.org/wiki/Polyfill_(programming)
+- [Wiki: Polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)

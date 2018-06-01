@@ -3775,6 +3775,18 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
+/***/ "./src/js/babel-transpiler-examples.js":
+/*!*********************************************!*\
+  !*** ./src/js/babel-transpiler-examples.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n// Below are javascript snippets written in ES2015. With the help of babel,\n// this will get transpiled to code the older browsers can understand.\n\n// Example 1\n// String interpolation\nvar name = \"Bob\",\n    time = \"today\";\n\nconsole.log(\"Hello \" + name + \", how are you \" + time + \"?\");\n\n// Example 2\n// Arrows functions =>\nvar materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];\n\nconsole.log(materials.map(function (material) {\n  return material.length;\n}));\n// expected output: Array [8, 6, 7, 9]\n\n\n// Example 3\n// Array.from() static method\n// Note: this is an example of babel using polyfill to make Array.from work in IE\nconsole.log(Array.from('foo'));\n// expected output: Array [\"f\", \"o\", \"o\"]\n\nconsole.log(Array.from([1, 2, 3], function (x) {\n  return x + x;\n}));\n// expected output: Array [2, 4, 6]\n\n//# sourceURL=webpack:///./src/js/babel-transpiler-examples.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -3783,7 +3795,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! babel-polyfill */ \"./node_modules/babel-polyfill/lib/index.js\");\n\n// Below is javascript written in ES2015. Babel will transpile it\nvar numbers = [1, 2, 3, 4];\n\nnumbers.forEach(function (number) {\n  console.log(number * 2);\n});\n\n// Now we will use the babel-polyfill\nconsole.log(Array.from('foo'));\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("\n\n__webpack_require__(/*! ./babel-transpiler-examples.js */ \"./src/js/babel-transpiler-examples.js\");\n\n// Add webpack plugins at top of entrypoint.\n// According to my webpack config file, my entry point is index.js\n__webpack_require__(/*! babel-polyfill */ \"./node_modules/babel-polyfill/lib/index.js\");\n\n// Include other js using import. Webpack will package this together\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
